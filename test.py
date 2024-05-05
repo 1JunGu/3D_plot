@@ -7,13 +7,13 @@ import cartopy.feature
 from cartopy.mpl.patch import geos_to_path
 import cartopy.crs as ccrs
 
-plt.rcParams["font.sans-serif"] = ["Times"]
+plt.rcParams.update({"font.family": "serif", "font.serif": ["Times"]})
 plt.rcParams["axes.unicode_minus"] = False  # 负号
 
 fig = plt.figure(figsize=(10, 8), dpi=200)
 ax = fig.add_subplot(111, projection="3d")
-ax.set_xlim(-180, 180)
-ax.set_ylim(-90, 90)
+ax.set_xlim(90, 160)
+ax.set_ylim(-5, 40)
 ax.set_zlim(0, 0.5)
 ##############################################################
 concat = lambda iterable: list(itertools.chain.from_iterable(iterable))
@@ -29,4 +29,4 @@ ax.add_collection3d(lc)
 ax.set_xlabel("longtitude")
 ax.set_ylabel("latitude")
 ax.set_zlabel("Height")
-plt.savefig("test.png")
+plt.savefig("test2.png", dpi = 300, bbox_inches = "tight", pad_inches = 0.5)
