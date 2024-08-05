@@ -6,7 +6,7 @@ The simple 3D plot：
 
 <img src="simple_3d.png" width=50%>
 
-The find results as:
+The final results as:
 
 <img src="test7.png" width=50%>
 
